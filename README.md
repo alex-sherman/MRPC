@@ -5,6 +5,21 @@ MRPC is a messaging framework for Remote Procedure Call applications that is fri
 * [Java/Android](https://github.com/alex-sherman/android-mrpc)
 * [ESP8266](https://github.com/alex-sherman/mrpc-esp8266#mrpc-for-the-esp8266)
 
+# Overview
+* An MRPC system is a collection of nodes connected by a single or multiple networks
+* Each node exposes some function definitions referred to as services
+* Services can have input values, and output values
+* Other nodes can then invoke these services
+
+MRPC itself is very general, so this overview is rather abstract. We could also consider some use cases of MRPC to describe it.
+
+* Home automation
+ * Lights and appliances expose services
+ * A phone can invoke services to control the home
+* Sensor network
+ * Temperature sensors in a field can expose a service to report temperature
+ * Alternatively a data collector could expose a service to record temperature, and the sensor nodes instead invoke this service periodically
+
 # Nodes
 An MRPC node is a communication end point that implements the MRPC framework. Typically there will exist one MRPC node per computing device, but it is also possible to have multiple nodes on a single device. Each node has some state associated with it as follows:
 
